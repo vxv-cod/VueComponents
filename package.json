@@ -1,0 +1,30 @@
+{
+  "name": "vue-components",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite --port 8080",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:unit": "vitest"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
+    "axios": "^1.6.8",
+    "devextreme": "23.1.5",
+    "devextreme-vue": "23.1.5",
+    "exceljs": "^4.4.0",
+    "file-saver": "^2.0.5",
+    "v-resize-observer": "^2.1.0",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.2",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.2.0",
+    "vite-plugin-dynamic-import": "^1.5.0"
+  }
+}
