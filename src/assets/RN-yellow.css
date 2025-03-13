@@ -1,0 +1,103 @@
+
+/* Основной шрифт текста */
+.rn-fonts {
+  font-family: "Helvetica Neue", "Segoe UI", helvetica, verdana, sans-serif;
+  font-size: 12px;
+  color: #333;
+}
+
+/* Таблица */
+.rn-data-grid-table {
+  border: 1px solid #999;
+}
+.rn-data-grid-header {
+  background-color: rgb(255, 230, 100);
+}
+.rn-data-grid-header .rn-fixed-left-checking,
+.rn-data-grid-header .rn-fixed-left-control,
+.rn-data-grid-header .rn-fixed-left-cell,
+.rn-data-grid-header .rn-fixed-right-control,
+.rn-data-grid-header .rn-fixed-right-cell {
+    background-color: rgb(238, 214, 96);
+}
+.rn-data-grid-row {
+  background-color: #fff;
+}
+.rn-data-grid-table .rn-data-grid-row:hover {
+  background-color: #aaaaaa36;
+}
+.rn-data-grid-row .rn-fixed-left-checking,
+.rn-data-grid-row .rn-fixed-left-control,
+.rn-data-grid-row .rn-fixed-left-cell,
+.rn-data-grid-row .rn-fixed-right-control,
+.rn-data-grid-row .rn-fixed-right-cell {
+    background-color: #f9f9f9;
+}
+.rn-data-grid-selected-row {
+  background-color: #a3c1c769;
+}
+
+.rn-data-grid-table thead th,
+.rn-data-grid-table tbody td {
+  border-bottom: 1px solid #aaa;
+  border-right: 1px solid #ddd;
+}
+
+/* Тонкая полоса прокрутки */
+.rn-thin-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255, 233, 126) rgb(255, 251, 235);
+}
+
+/* Уровни группировки */
+.rn-group-level-0,
+.rn-group-level-1,
+.rn-group-level-2,
+.rn-group-level-3,
+.rn-group-level-4 {
+  padding: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.rn-group-level-0 {
+  background-color: rgb(255, 237, 158);
+}
+.rn-group-level-1 {
+  background-color: rgb(255, 246, 198);
+}
+.rn-group-level-2 {
+  background-color: rgb(255, 250, 220);
+}
+.rn-group-level-3 {
+  background-color: rgb(255, 253, 235);
+}
+.rn-group-level-4 {
+  background-color: rgb(255, 255, 247);
+}
+
+
+/* Всплывающие окна */
+.rn-drop-down-content {
+  background-color: #ffffffde;
+  border: 1px solid #666;
+  border-radius: 5px;
+  padding: 10px 5px;
+  text-align: left;
+  font-weight: normal;
+}
+
+/* Кнопки */
+.rn-button {
+  color: #555;
+  background-color: rgb(255, 246, 203);
+  cursor: pointer;
+  border: 1px solid #999;
+  border-radius: 4px;
+  padding: 4px;
+  display: inline-block;
+}
+.rn-button:hover {
+  background-color: rgb(255, 241, 170);
+  border: 1px solid #aaa;
+}

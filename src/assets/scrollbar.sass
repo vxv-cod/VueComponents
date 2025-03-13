@@ -1,0 +1,26 @@
+@import "./quasar_color.sass"
+
+$color-button: $grey-9
+$color-track: $grey-5
+$color-thumb: $grey-9
+
+*
+  scrollbar-width: thin
+  // scrollbar-color: $color-track $color-button
+  transition: scrollbar-color 0.3s ease-out
+  &::-webkit
+    &-scrollbar
+      width: 6px
+      height: 6px
+      &-button
+        background: $color-button
+        height: 6px
+      &-track
+        background: $color-track
+      &-track-piece
+        background: $color-track
+      &-thumb
+        background: $color-thumb
+        transition: all 0.4s
+        -moz-transition: all 0.4s
+        -webkit-transition: all 0.4s

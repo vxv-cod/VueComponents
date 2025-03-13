@@ -1,0 +1,70 @@
+@import "@/assets/quasar_color.sass"
+
+*
+  box-sizing: border-box 
+
+$text-color-light: $grey-1
+$text-color-dark: $grey-9
+$background: $grey-8
+$hover-color: $grey-3
+
+$box-shadow: 0px 0px 3px $grey-10
+$border: 0.5px solid $grey-5
+
+
+.search
+  position: sticky
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0  
+  z-index: 5
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  width: 100%
+  // height: 100%
+  padding: 1.5px 5px
+  margin-botton: 5px
+  border-bottom:  0.5px solid $grey-5
+  border-top:  0.5px solid $grey-5
+  box-shadow: inset $box-shadow
+  color: $text-color-light
+  background-color: $background
+  // height: 50px
+
+  &[text_there='true']
+    background-color: $hover-color
+  
+  &:hover, &[focusinput='true']
+    background-color: $hover-color
+    box-shadow: none
+    input::placeholder
+      color: $text-color-dark
+    .Icon[text_there='true']
+      color: red
+    .Icon[text_there='false']
+      color: $text-color-dark
+  
+  input
+    background-color: inherit
+    border: none
+    outline: none
+    font-size: 12px
+    width: 100%
+    height: 100%
+    &::placeholder
+      color: $text-color-light
+
+  .Icon
+    cursor: pointer
+    color: $text-color-light
+    &[text_there='true']
+      color: red
+
+  label
+    display: flex
+    justify-content: center
+    height: 100%
+    padding: 1.5px 0

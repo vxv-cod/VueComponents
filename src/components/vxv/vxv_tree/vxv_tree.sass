@@ -1,0 +1,111 @@
+@import "@/assets/quasar_color.sass"
+
+*
+  box-sizing: border-box 
+
+@mixin mixin_tree($dark: false)
+  $hover: $blue-grey-4
+  $indent_horisont: 20px
+  $indent_vertical: 1.5px
+  $border: 1.5px solid $blue-grey-4
+  
+  $text-color: $grey-9
+  $background: $grey-3
+  
+  @if $dark
+    $text-color: $grey-1
+    $background: $grey-9
+
+  .contener
+    position: relative
+    display: flex
+    flex-direction: column
+    box-sizing: border-box
+    background-color: $background
+    color: $text-color
+    padding: 5px
+    height: 100%
+    border: none
+    outline: none
+
+  .tree_header.box_root::before
+    position: absolute
+    height: 100%
+    top: $indent_vertical + $indent_horisont
+    left: $indent_horisont / 2
+    border: none
+    border-left: $border
+    
+  .tree_header[status='false'].box_root::before
+    visibility: hidden
+    
+  .tree_header[status='true'].box_root::before
+    visibility: visible
+
+  .box_node
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      height: 100%
+      top: 0
+      left: -$indent_horisont
+      border-left: $border
+        
+  ._last::before
+    visibility: hidden
+
+  .node_child
+    position: relative
+    display: flex
+    flex-direction: column
+    padding-left: calc( $indent_horisont * 1.5 )
+    padding-left: $indent_horisont * 1.5
+    white-space: nowrap
+    
+  .tree_header
+    position: relative
+    display: flex
+    flex-direction: row
+    cursor: default
+    width: 100%
+    min-height: $indent_horisont
+    margin: $indent_vertical 0
+    &[activated="true"]
+      color: $amber
+    .header_icon
+      position: relative
+      height: $indent_horisont
+      margin-left: 5px
+      margin-right: 2.5px
+    .header_text
+      padding-left: 2.5px
+      white-space: pre-wrap
+      display: flex
+      align-items: center
+      &[status_and_is_child='true']::after
+        content: ''
+        position: absolute
+        height: calc(100% - 5px)
+        top: $indent_vertical + $indent_horisont - 2.5px
+        left: $indent_horisont / 2
+        border-left: $border
+    &:hover
+      background-color: $hover
+    &:active
+      color: $amber
+    &::before
+      content: ''
+      position: absolute
+      height: ($indent_horisont * 0.5) + ($indent_vertical * 2)
+      width: $indent_horisont - 2.5px
+      top: - ($indent_vertical * 2)
+      left: -$indent_horisont
+      border-left: $border
+      border-bottom: $border
+
+
+.contener
+  @include mixin_tree()
+.contener[dark]
+  @include mixin_tree(true)
